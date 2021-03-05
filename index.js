@@ -96,8 +96,9 @@ let newReview = {
   feedback: 'I liked the food but I was in a hurry and they took a little longer than I expected'
 };
 
-reviews.push(newReview);
-console.log(reviews);
+let addedReviews = reviews;
+addedReviews.push(newReview);
+console.log(addedReviews);
 
 /* 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 5: 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 
 Reyna's feedback is missing! Use what you know to do the following: (no function needed) 
@@ -124,8 +125,9 @@ Use the getReviewByIndex function below to do the following:
 */
 
 
-function getReviewByIndex(/*Your code here*/) {
-  /*Your code here*/
+function getReviewByIndex(arr, arrNum) {
+  let obj = arr[arrNum];
+  return `${obj.name} gave the restaurant a ${obj.rating} star review, and their feedback was: ${obj.feedback}`;
 }
 
 
@@ -142,12 +144,17 @@ Use the getLastReview function below to do the following:
   For example: getLastReview(reviews) would return: "Reyna gave the restaurant a 3.5 star review, and their feedback was: this place is chill with really cool people, great for getting work done on weekdays".
 */
 
+// function getReviewByIndex(arr, arrNum) {
+//   let obj = arr[arrNum];
+//   return `${obj.name} gave the restaurant a ${obj.rating} star review, and their feedback was: ${obj.feedback}`;
+// }
 
-function getLastReview(/*Your code here*/) {
-  /*Your code here*/
-} 
 
+function getLastReview(list) {
+  return getReviewByIndex(list, list.length - 1);
+}
 
+console.log(getLastReview(reviews));
 
 ///////////////🍔☕️🍽 STRETCH🍔☕️🍽////////////////////
 
